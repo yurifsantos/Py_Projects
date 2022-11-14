@@ -11,7 +11,11 @@ def password_gen():
     for pwd in range(pass_options):
         password = ''
         for i in range(pass_length):
-            password += ramd.choice(chars)
+            if i == 0:
+                while password.isalpha() is not True:
+                    password = ramd.choice(chars)
+            else:
+                password += ramd.choice(chars)
         
         password_list.append(password)
     
