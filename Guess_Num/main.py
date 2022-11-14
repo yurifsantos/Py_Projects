@@ -36,7 +36,7 @@ def guess_num_machine():
     while reply != 'c' and chances > 0:
         print(f"The script has {chances} chances left")
         guess = ramd.randint(min_num, max_num)
-        reply = input(f"The script guessed {guess}. Is the guess [L]ower, [H]igher or [C]orrect than the picked number?: ").lower()
+        reply = input(f"The script guessed {guess}. Is the guess [C]orrect or [L]ower/[H]igher than the picked number?: ").lower()
         if reply == 'l':
             min_num = guess + 1
             chances -= 1
